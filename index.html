@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumit Patel | Portfolio</title>
+    <meta
+      name="description"
+      content="Personal developer and UI/UX design portfolio for Sumit Patel featuring interactive 3D project cards, continuous technology slideshow, UI/UX showcase with lightbox, and a dark editorial design."
+    />
+    <meta property="og:title" content="Sumit Patel | Portfolio" />
+    <meta
+      property="og:description"
+      content="Personal developer and UI/UX design portfolio for Sumit Patel."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Typography: Outfit (Display), DM Sans (Body), JetBrains Mono (Tabular Metrics) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <canvas id="ambient-bg-canvas" aria-hidden="true"></canvas>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ======================== HEADER & NAVIGATION ======================== -->
+    <header id="navbar" class="site-header">
+      <div class="container nav-container">
+        <a href="#hero" class="brand-logo" aria-label="Sumit.Dev home">
+          <span class="brand-static">Sumit</span><span id="typewriter-text" class="brand-typed">.Dev</span><span class="typewriter-cursor" aria-hidden="true"></span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul id="nav-links" class="nav-links">
+            <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#ui-ux" class="nav-link" data-section="ui-ux">UI/UX</a></li>
+            <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a
+            href="https://github.com/Sumitpatel2512"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-social-btn"
+            aria-label="Sumit Patel GitHub profile"
+            title="GitHub"
+          >
+            <img src="assets/icons/github.svg" alt="" width="16" height="16" class="icon-invert-dark" aria-hidden="true" />
+            <span class="nav-social-label">GitHub</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/sumitpatel2512/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-social-btn"
+            aria-label="Sumit Patel LinkedIn profile"
+            title="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+            <span class="nav-social-label">LinkedIn</span>
+          </a>
+
+          <button
+            id="menu-toggle"
+            class="menu-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-drawer" class="mobile-drawer" hidden>
+        <nav aria-label="Mobile navigation">
+          <ul class="mobile-nav-links">
+            <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#ui-ux" class="mobile-nav-link">UI/UX Design</a></li>
+            <li><a href="#education" class="mobile-nav-link">Education</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ======================== HERO SECTION ======================== -->
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <div class="hero-split">
+            <div class="hero-copy">
+              <p class="eyebrow-text">
+                Web Developer <span aria-hidden="true">&middot;</span> UI/UX Designer
+              </p>
+              <h1 class="hero-title">Hello, I&rsquo;m Sumit Patel.</h1>
+              <p class="hero-role">Web Developer &amp; UI/UX Designer.</p>
+              <p class="hero-intro">
+                &ldquo;I build useful digital experiences, develop web applications and turn ideas into clear, user-friendly interfaces.&rdquo;
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+              </div>
+
+              <div class="hero-social-row" aria-label="Social profiles">
+                <a
+                  href="https://github.com/Sumitpatel2512"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                >
+                  <img src="assets/icons/github.svg" alt="GitHub" width="18" height="18" class="icon-invert-dark" />
+                  <span>GitHub</span>
+                </a>
+                <span class="meta-sep" aria-hidden="true">/</span>
+                <a
+                  href="https://www.linkedin.com/in/sumitpatel2512/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                >
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="hero-showcase-stage">
+                <img
+                  src="assets/images/profile/hero-coding-color.webp"
+                  alt="Colorful illustration of a web developer coding on a laptop at a desk with plant, coffee cup, and floating UI shapes"
+                  width="520"
+                  height="520"
+                  class="hero-showcase-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== ABOUT SECTION ======================== -->
+      <section id="about" class="section-block" data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">01. About Me</p>
+            <h2 class="section-title">Engineering clean web systems with human-centered UI/UX clarity.</h2>
+          </div>
+
+          <div class="about-top-grid">
+            <div class="about-narrative">
+              <p class="lead-paragraph">
+                I&rsquo;m <strong>Sumit Patel</strong>, a <strong>Web Developer</strong> and <strong>UI/UX Designer</strong> pursuing a B.Tech in Artificial Intelligence and Machine Learning (D2D) at JG University after completing my Diploma in Computer Engineering at P P Savani University.
+              </p>
+              <p>
+                Across <strong>8+ projects completed or worked on</strong>, I bridge functional software engineering and thoughtful interface architecture&mdash;translating complex workflows like student scheduling, community collaboration, seat reservation, and computer-vision proctoring into intuitive digital products.
+              </p>
+            </div>
+
+            <dl class="about-facts-list">
+              <div class="about-fact-row">
+                <dt>Experience</dt>
+                <dd>8+ Projects Completed &amp; Built</dd>
+              </div>
+              <div class="about-fact-row">
+                <dt>Core Roles</dt>
+                <dd>Web Developer &amp; UI/UX Designer</dd>
+              </div>
+              <div class="about-fact-row">
+                <dt>Current Focus</dt>
+                <dd>B.Tech AI &amp; ML (D2D), JG University</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="about-pillars">
+            <article class="pillar-card">
+              <h3>Technical &amp; Development Interests</h3>
+              <ul class="clean-list">
+                <li>Full-Stack Web Engineering with HTML5, CSS3, JavaScript &amp; Flask</li>
+                <li>Cross-Platform Mobile Applications with Dart, Flutter &amp; Firebase</li>
+                <li>Applied Computer Vision &amp; AI Systems using Python, OpenCV &amp; TensorFlow</li>
+                <li>Relational &amp; NoSQL Data Modeling across MySQL and MongoDB</li>
+              </ul>
+            </article>
+
+            <article class="pillar-card">
+              <h3>UI/UX &amp; Product Design Focus</h3>
+              <ul class="clean-list">
+                <li>Component-Driven Interface Systems &amp; Interactive Prototypes in Figma</li>
+                <li>Responsive Grid Architecture, Typography &amp; Accessible Contrast</li>
+                <li>Low-Fidelity Wireframing, User Flows &amp; Usability Iteration</li>
+                <li>Clean Design-to-Code Handoff for Web &amp; Mobile Applications</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== TECHNICAL STACK & TOOLS SLIDESHOW ======================== -->
+      <section id="skills" class="section-block section-alt" data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">02. Technical Stack &amp; Tools</p>
+            <h2 class="section-title">Continuous technology &amp; tooling slideshow.</h2>
+            <p class="section-subtitle">
+              Every programming language, framework, database, and tool runs in a live sliding showcase with official brand logos. Hover any card to pause and inspect.
+            </p>
+          </div>
+        </div>
+
+        <!-- Full-Bleed Dual Continuous Horizontal Slideshow -->
+        <div id="skills-slideshow" class="marquee-wrapper" aria-label="Technical stack and tools slideshow">
+          <!-- Slide Track 1: Programming Languages & Frameworks -->
+          <div class="marquee-row-wrap" data-track-group="languages">
+            <div class="container">
+              <p class="marquee-row-label">Programming Languages &amp; Frameworks</p>
+            </div>
+            <div class="marquee-row" data-direction="left">
+              <div class="marquee-track">
+                <div class="slide-tech-card" tabindex="0" data-tooltip="HTML5 — Semantic Web Markup">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/html5.svg" alt="HTML5 official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">HTML5</span>
+                    <span class="slide-tech-role">Semantic Markup</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="CSS3 — Modern Layout & Styling">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/css3.svg" alt="CSS3 official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">CSS3</span>
+                    <span class="slide-tech-role">Grid &amp; Flexbox</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="JavaScript — Interactive Web Logic">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/javascript.svg" alt="JavaScript official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">JavaScript</span>
+                    <span class="slide-tech-role">DOM &amp; Logic</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="Python — Backend, AI & Automation">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/python.svg" alt="Python official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">Python</span>
+                    <span class="slide-tech-role">Backend &amp; AI</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="Dart — Cross-Platform App Language">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/dart.svg" alt="Dart official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">Dart</span>
+                    <span class="slide-tech-role">Mobile Language</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="Flutter — Cross-Platform UI Framework">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/flutter.svg" alt="Flutter official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">Flutter</span>
+                    <span class="slide-tech-role">App Framework</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="Flask — Python Micro Web Framework">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/flask.svg" alt="Flask official logo" width="38" height="38" class="icon-invert-dark" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">Flask</span>
+                    <span class="slide-tech-role">Web Framework</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="Pygame — 2D Game Development">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/pygame.svg" alt="Pygame official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">Pygame</span>
+                    <span class="slide-tech-role">2D Game Engine</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="OpenCV — Real-Time Computer Vision">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/opencv.svg" alt="OpenCV official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">OpenCV</span>
+                    <span class="slide-tech-role">Computer Vision</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="TensorFlow — Machine Learning Models">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/tensorflow.svg" alt="TensorFlow official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">TensorFlow</span>
+                    <span class="slide-tech-role">Deep Learning</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Track 2: Databases, Cloud & Development Tools -->
+          <div class="marquee-row-wrap" data-track-group="tools">
+            <div class="container">
+              <p class="marquee-row-label">Databases, Cloud &amp; Development Tools</p>
+            </div>
+            <div class="marquee-row" data-direction="right">
+              <div class="marquee-track marquee-track-reverse">
+                <div class="slide-tech-card" tabindex="0" data-tooltip="Firebase — Realtime Cloud & Auth">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/firebase.svg" alt="Firebase official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">Firebase</span>
+                    <span class="slide-tech-role">Cloud Backend</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="MongoDB — Document NoSQL Database">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/mongodb.svg" alt="MongoDB official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">MongoDB</span>
+                    <span class="slide-tech-role">NoSQL Database</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="MySQL — Relational SQL Database">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/mysql.svg" alt="MySQL official logo" width="38" height="38" class="icon-bright-dark" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">MySQL</span>
+                    <span class="slide-tech-role">SQL Database</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="Android Studio — Mobile App IDE">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/androidstudio.svg" alt="Android Studio official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">Android Studio</span>
+                    <span class="slide-tech-role">Mobile IDE</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="Figma — UI/UX Design & Prototyping">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/figma.svg" alt="Figma official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">Figma</span>
+                    <span class="slide-tech-role">UI/UX &amp; Prototypes</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="Git — Distributed Version Control">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/git.svg" alt="Git official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">Git</span>
+                    <span class="slide-tech-role">Version Control</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="GitHub — Repositories & Collaboration">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/github.svg" alt="GitHub official logo" width="38" height="38" class="icon-invert-dark" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">GitHub</span>
+                    <span class="slide-tech-role">Code Hosting</span>
+                  </div>
+                </div>
+
+                <div class="slide-tech-card" tabindex="0" data-tooltip="Visual Studio Code — Primary Code Editor">
+                  <div class="slide-tech-icon">
+                    <img src="assets/icons/vscode.svg" alt="Visual Studio Code official logo" width="38" height="38" />
+                  </div>
+                  <div class="slide-tech-info">
+                    <span class="slide-tech-name">Visual Studio Code</span>
+                    <span class="slide-tech-role">Code Editor</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== DEVELOPMENT PROJECTS (5 FLIP CARDS) ======================== -->
+      <section id="projects" class="section-block" data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">03. Featured Development Projects</p>
+            <h2 class="section-title">Five interactive software &amp; product builds.</h2>
+            <p class="section-subtitle">
+              Hover a card on desktop or tap on mobile to flip for full features and technology stack details. Visuals shown are representative UI previews and concept mockups.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 1: Student Management System -->
+            <article class="project-flip-card" tabindex="0" aria-label="Student Management System project card, press Enter or tap to flip">
+              <div class="project-flip-inner">
+                <div class="project-face project-front">
+                  <div class="project-thumb-wrap">
+                    <img
+                      src="assets/images/projects/student-management.webp"
+                      alt="Representative UI preview of Student Management System mobile app displaying weekly study timetable, tasks, and GPA progress"
+                      loading="lazy"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                  <div class="project-front-body">
+                    <p class="project-meta">Mobile Application <span aria-hidden="true">&middot;</span> Representative UI Preview</p>
+                    <h3 class="project-title">Student Management System</h3>
+                    <p class="project-short-desc">
+                      A student-focused mobile application that helps students manage study schedules, academic details and time management.
+                    </p>
+                    <div class="project-front-footer">
+                      <div class="project-tech-icons" aria-label="Technologies used">
+                        <span class="mini-tech-icon" data-tooltip="Dart">
+                          <img src="assets/icons/dart.svg" alt="Dart" width="20" height="20" loading="lazy" />
+                        </span>
+                        <span class="mini-tech-icon" data-tooltip="Firebase">
+                          <img src="assets/icons/firebase.svg" alt="Firebase" width="20" height="20" loading="lazy" />
+                        </span>
+                        <span class="mini-tech-icon" data-tooltip="Android Studio">
+                          <img src="assets/icons/androidstudio.svg" alt="Android Studio" width="20" height="20" loading="lazy" />
+                        </span>
+                      </div>
+                      <button type="button" class="flip-trigger-btn" aria-label="Flip Student Management System card for details">
+                        Details <span aria-hidden="true">&#8635;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-face project-back">
+                  <div class="project-back-header">
+                    <div>
+                      <p class="project-meta">Mobile Application</p>
+                      <h3 class="project-title">Student Management System</h3>
+                    </div>
+                    <button type="button" class="flip-back-btn" aria-label="Flip back to preview">&larr; Preview</button>
+                  </div>
+                  <p class="project-detail-desc">
+                    Designed to simplify daily academic workflows, combining study timetables, deadline tracking, and cloud-backed academic records in one structured mobile companion.
+                  </p>
+                  <div class="project-back-section">
+                    <h4>Key Features</h4>
+                    <ul class="project-features">
+                      <li>Study Schedule Management</li>
+                      <li>Daily Study Planning</li>
+                      <li>Academic Information</li>
+                      <li>Time Management</li>
+                      <li>Firebase Integration</li>
+                    </ul>
+                  </div>
+                  <div class="project-back-section">
+                    <h4>Technologies</h4>
+                    <div class="back-tech-list">
+                      <span class="back-tech-item">
+                        <img src="assets/icons/dart.svg" alt="Dart" width="18" height="18" loading="lazy" />
+                        <span>Dart</span>
+                      </span>
+                      <span class="back-tech-item">
+                        <img src="assets/icons/firebase.svg" alt="Firebase" width="18" height="18" loading="lazy" />
+                        <span>Firebase</span>
+                      </span>
+                      <span class="back-tech-item">
+                        <img src="assets/icons/androidstudio.svg" alt="Android Studio" width="18" height="18" loading="lazy" />
+                        <span>Android Studio</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: XP Farm Student Hub -->
+            <article class="project-flip-card" tabindex="0" aria-label="XP Farm Student Hub project card, press Enter or tap to flip">
+              <div class="project-flip-inner">
+                <div class="project-face project-front">
+                  <div class="project-thumb-wrap">
+                    <img
+                      src="assets/images/projects/xp-farm.webp"
+                      alt="Representative UI preview of XP Farm Student Hub showing student profiles, internships, guilds, and community feed"
+                      loading="lazy"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                  <div class="project-front-body">
+                    <p class="project-meta">Full-Stack Web Platform <span aria-hidden="true">&middot;</span> Representative UI Preview</p>
+                    <h3 class="project-title">XP Farm Student Hub</h3>
+                    <p class="project-short-desc">
+                      An all-in-one student ecosystem for internships, guilds, peer counselling, ride sharing, and project team collaboration.
+                    </p>
+                    <div class="project-front-footer">
+                      <div class="project-tech-icons" aria-label="Technologies used">
+                        <span class="mini-tech-icon" data-tooltip="HTML5"><img src="assets/icons/html5.svg" alt="HTML5" width="20" height="20" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="CSS3"><img src="assets/icons/css3.svg" alt="CSS3" width="20" height="20" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="JavaScript"><img src="assets/icons/javascript.svg" alt="JavaScript" width="20" height="20" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="Python"><img src="assets/icons/python.svg" alt="Python" width="20" height="20" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="Flask"><img src="assets/icons/flask.svg" alt="Flask" width="20" height="20" class="icon-invert-dark" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="MongoDB"><img src="assets/icons/mongodb.svg" alt="MongoDB" width="20" height="20" loading="lazy" /></span>
+                      </div>
+                      <button type="button" class="flip-trigger-btn" aria-label="Flip XP Farm Student Hub card for details">
+                        Details <span aria-hidden="true">&#8635;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-face project-back">
+                  <div class="project-back-header">
+                    <div>
+                      <p class="project-meta">Full-Stack Web Platform</p>
+                      <h3 class="project-title">XP Farm Student Hub</h3>
+                    </div>
+                    <button type="button" class="flip-back-btn" aria-label="Flip back to preview">&larr; Preview</button>
+                  </div>
+                  <p class="project-detail-desc">
+                    Built around campus collaboration, enabling students to discover internships, form hackathon teams, share campus rides, and connect via structured guilds and direct messaging.
+                  </p>
+                  <div class="project-back-section">
+                    <h4>Key Features</h4>
+                    <ul class="project-features project-features-compact">
+                      <li>Student Community &amp; Connections</li>
+                      <li>Internship, Job &amp; Freelance Opportunities</li>
+                      <li>Ride Sharing &amp; Skill Learning</li>
+                      <li>Student Counselling &amp; Career Guidance</li>
+                      <li>Guilds, Project Teams &amp; Messaging</li>
+                    </ul>
+                  </div>
+                  <div class="project-back-section">
+                    <h4>Technologies</h4>
+                    <div class="back-tech-list">
+                      <span class="back-tech-item"><img src="assets/icons/html5.svg" alt="HTML" width="18" height="18" loading="lazy" /><span>HTML</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/css3.svg" alt="CSS" width="18" height="18" loading="lazy" /><span>CSS</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/javascript.svg" alt="JavaScript" width="18" height="18" loading="lazy" /><span>JavaScript</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/python.svg" alt="Python" width="18" height="18" loading="lazy" /><span>Python</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/flask.svg" alt="Flask" width="18" height="18" class="icon-invert-dark" loading="lazy" /><span>Flask</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/mongodb.svg" alt="MongoDB" width="18" height="18" loading="lazy" /><span>MongoDB</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: Bus Ticket Booking Platform -->
+            <article class="project-flip-card" tabindex="0" aria-label="Bus Ticket Booking Platform project card, press Enter or tap to flip">
+              <div class="project-flip-inner">
+                <div class="project-face project-front">
+                  <div class="project-thumb-wrap">
+                    <img
+                      src="assets/images/projects/bus-booking.webp"
+                      alt="Representative UI preview of Bus Ticket Booking Platform showing route listings and interactive coach seat map"
+                      loading="lazy"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                  <div class="project-front-body">
+                    <p class="project-meta">Frontend Web Application <span aria-hidden="true">&middot;</span> Representative UI Preview</p>
+                    <h3 class="project-title">Bus Ticket Booking Platform</h3>
+                    <p class="project-short-desc">
+                      Interactive intercity bus reservation interface featuring live seat-map selection, seat-view preview, and booking confirmation.
+                    </p>
+                    <div class="project-front-footer">
+                      <div class="project-tech-icons" aria-label="Technologies used">
+                        <span class="mini-tech-icon" data-tooltip="HTML5"><img src="assets/icons/html5.svg" alt="HTML5" width="20" height="20" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="CSS3"><img src="assets/icons/css3.svg" alt="CSS3" width="20" height="20" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="JavaScript"><img src="assets/icons/javascript.svg" alt="JavaScript" width="20" height="20" loading="lazy" /></span>
+                      </div>
+                      <button type="button" class="flip-trigger-btn" aria-label="Flip Bus Ticket Booking Platform card for details">
+                        Details <span aria-hidden="true">&#8635;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-face project-back">
+                  <div class="project-back-header">
+                    <div>
+                      <p class="project-meta">Frontend Web Application</p>
+                      <h3 class="project-title">Bus Ticket Booking Platform</h3>
+                    </div>
+                    <button type="button" class="flip-back-btn" aria-label="Flip back to preview">&larr; Preview</button>
+                  </div>
+                  <p class="project-detail-desc">
+                    Crafted with semantic HTML5, responsive CSS Grid layouts, and interactive Vanilla JavaScript state to deliver frictionless route filtering and coach seat selection.
+                  </p>
+                  <div class="project-back-section">
+                    <h4>Key Features</h4>
+                    <ul class="project-features">
+                      <li>Bus Search &amp; Bus Selection</li>
+                      <li>Interactive Seat Selection &amp; Availability</li>
+                      <li>Seat View Preview</li>
+                      <li>Passenger Information Capture</li>
+                      <li>Booking Confirmation Summary</li>
+                    </ul>
+                  </div>
+                  <div class="project-back-section">
+                    <h4>Technologies</h4>
+                    <div class="back-tech-list">
+                      <span class="back-tech-item"><img src="assets/icons/html5.svg" alt="HTML" width="18" height="18" loading="lazy" /><span>HTML</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/css3.svg" alt="CSS" width="18" height="18" loading="lazy" /><span>CSS</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/javascript.svg" alt="JavaScript" width="18" height="18" loading="lazy" /><span>JavaScript</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4: Treasure Hunt Adventure Game -->
+            <article class="project-flip-card" tabindex="0" aria-label="Treasure Hunt Adventure Game project card, press Enter or tap to flip">
+              <div class="project-flip-inner">
+                <div class="project-face project-front">
+                  <div class="project-thumb-wrap">
+                    <img
+                      src="assets/images/projects/treasure-hunt.webp"
+                      alt="Representative 2D game preview of Treasure Hunt Adventure Game with explorer character, gold coins, chest, and mini map"
+                      loading="lazy"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                  <div class="project-front-body">
+                    <p class="project-meta">2D Adventure Game <span aria-hidden="true">&middot;</span> Concept Gameplay Preview</p>
+                    <h3 class="project-title">Treasure Hunt Adventure Game</h3>
+                    <p class="project-short-desc">
+                      A 2D adventure exploration game featuring responsive character movement, coin collection, treasure chests, and live scoring.
+                    </p>
+                    <div class="project-front-footer">
+                      <div class="project-tech-icons" aria-label="Technologies used">
+                        <span class="mini-tech-icon" data-tooltip="Python"><img src="assets/icons/python.svg" alt="Python" width="20" height="20" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="Pygame"><img src="assets/icons/pygame.svg" alt="Pygame" width="20" height="20" loading="lazy" /></span>
+                      </div>
+                      <button type="button" class="flip-trigger-btn" aria-label="Flip Treasure Hunt Adventure Game card for details">
+                        Details <span aria-hidden="true">&#8635;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-face project-back">
+                  <div class="project-back-header">
+                    <div>
+                      <p class="project-meta">2D Adventure Game</p>
+                      <h3 class="project-title">Treasure Hunt Adventure Game</h3>
+                    </div>
+                    <button type="button" class="flip-back-btn" aria-label="Flip back to preview">&larr; Preview</button>
+                  </div>
+                  <p class="project-detail-desc">
+                    An interactive 2D tile-based game loop built in Python and Pygame with sprite collision detection, progressive map levels, and persistent score tracking.
+                  </p>
+                  <div class="project-back-section">
+                    <h4>Key Features</h4>
+                    <ul class="project-features">
+                      <li>Player Movement &amp; Sprite Controls</li>
+                      <li>Coin Collection &amp; Collision Logic</li>
+                      <li>Treasure Hunting Across Ruins</li>
+                      <li>Interactive Gameplay Loop</li>
+                      <li>Real-Time Game Scoring</li>
+                    </ul>
+                  </div>
+                  <div class="project-back-section">
+                    <h4>Technologies</h4>
+                    <div class="back-tech-list">
+                      <span class="back-tech-item"><img src="assets/icons/python.svg" alt="Python" width="18" height="18" loading="lazy" /><span>Python</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/pygame.svg" alt="Pygame" width="18" height="18" loading="lazy" /><span>Pygame</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 5: AI-Based Online Exam Proctoring System (Concept / Proposed) -->
+            <article class="project-flip-card project-card-wide" tabindex="0" aria-label="AI-Based Online Exam Proctoring System concept project card, press Enter or tap to flip">
+              <div class="project-flip-inner">
+                <div class="project-face project-front">
+                  <div class="project-thumb-wrap">
+                    <img
+                      src="assets/images/projects/ai-proctoring.webp"
+                      alt="Concept dashboard mockup of AI-Based Online Exam Proctoring System showing webcam face landmark box and alert logs"
+                      loading="lazy"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                  <div class="project-front-body">
+                    <p class="project-meta">Proposed / Concept Project <span aria-hidden="true">&middot;</span> Computer Vision &amp; Web</p>
+                    <h3 class="project-title">AI-Based Online Exam Proctoring System</h3>
+                    <p class="project-short-desc">
+                      A proposed automated examination integrity platform combining real-time face detection, multi-face alerts, and admin exam analytics.
+                    </p>
+                    <div class="project-front-footer">
+                      <div class="project-tech-icons" aria-label="Technologies proposed">
+                        <span class="mini-tech-icon" data-tooltip="Python"><img src="assets/icons/python.svg" alt="Python" width="20" height="20" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="Flask"><img src="assets/icons/flask.svg" alt="Flask" width="20" height="20" class="icon-invert-dark" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="OpenCV"><img src="assets/icons/opencv.svg" alt="OpenCV" width="20" height="20" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="TensorFlow"><img src="assets/icons/tensorflow.svg" alt="TensorFlow" width="20" height="20" loading="lazy" /></span>
+                        <span class="mini-tech-icon" data-tooltip="MySQL"><img src="assets/icons/mysql.svg" alt="MySQL" width="20" height="20" class="icon-bright-dark" loading="lazy" /></span>
+                      </div>
+                      <button type="button" class="flip-trigger-btn" aria-label="Flip AI Proctoring card for details">
+                        Details <span aria-hidden="true">&#8635;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-face project-back">
+                  <div class="project-back-header">
+                    <div>
+                      <p class="project-meta">Proposed / Concept Architecture</p>
+                      <h3 class="project-title">AI-Based Online Exam Proctoring System</h3>
+                    </div>
+                    <button type="button" class="flip-back-btn" aria-label="Flip back to preview">&larr; Preview</button>
+                  </div>
+                  <p class="project-detail-desc">
+                    Concept architecture for remote academic assessments: monitors candidate presence via OpenCV and TensorFlow vision models, logs anomalies, and compiles automated exam reports.
+                  </p>
+                  <div class="project-back-section">
+                    <h4>Proposed Capabilities</h4>
+                    <ul class="project-features project-features-compact">
+                      <li>Face Detection &amp; Multiple Face Detection</li>
+                      <li>Suspicious Activity Alerts</li>
+                      <li>Full-Screen Monitoring</li>
+                      <li>Admin Monitoring Dashboard</li>
+                      <li>Automatic Result Generation</li>
+                    </ul>
+                  </div>
+                  <div class="project-back-section">
+                    <h4>Planned Stack</h4>
+                    <div class="back-tech-list">
+                      <span class="back-tech-item"><img src="assets/icons/python.svg" alt="Python" width="18" height="18" loading="lazy" /><span>Python</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/flask.svg" alt="Flask" width="18" height="18" class="icon-invert-dark" loading="lazy" /><span>Flask</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/opencv.svg" alt="OpenCV" width="18" height="18" loading="lazy" /><span>OpenCV</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/tensorflow.svg" alt="TensorFlow" width="18" height="18" loading="lazy" /><span>TensorFlow</span></span>
+                      <span class="back-tech-item"><img src="assets/icons/mysql.svg" alt="MySQL" width="18" height="18" class="icon-bright-dark" loading="lazy" /><span>MySQL</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== UI/UX DESIGN PORTFOLIO ======================== -->
+      <section id="ui-ux" class="section-block section-alt" data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">04. UI/UX Design Showcase</p>
+            <h2 class="section-title">Interfaces, wireframes &amp; interactive prototypes.</h2>
+            <p class="section-subtitle">
+              Sample Figma-inspired design previews stored locally in <code>assets/images/ui-ux/</code>. Click any preview to inspect in full screen.
+            </p>
+          </div>
+
+          <div class="showcase-grid" id="uiux-grid">
+            <article class="showcase-card" data-gallery="uiux" data-category="mobile prototypes">
+              <button
+                type="button"
+                class="showcase-media-btn lightbox-trigger"
+                data-src="assets/images/ui-ux/mobile-ui.webp"
+                data-title="FinTrack Mobile Wealth App UI"
+                data-category="Mobile Application UI · Prototypes"
+                data-desc="Multi-screen mobile UI system covering onboarding, portfolio balance overview, asset allocation charts, and interactive transaction navigation."
+                aria-label="Preview FinTrack Mobile Wealth App UI in lightbox"
+              >
+                <img
+                  src="assets/images/ui-ux/mobile-ui.webp"
+                  alt="Mobile application UI design showcase featuring onboarding, wealth dashboard, and portfolio analytics screens"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="showcase-hover-hint">Inspect Preview &nearr;</span>
+              </button>
+              <div class="showcase-card-body">
+                <p class="showcase-meta">Mobile Application UI <span aria-hidden="true">&middot;</span> Prototypes</p>
+                <h3 class="showcase-title">FinTrack Mobile Wealth App UI</h3>
+                <p class="showcase-desc">
+                  Clean three-screen mobile interface flow emphasizing clarity, tactile bottom navigation, and scannable personal finance cards.
+                </p>
+              </div>
+            </article>
+
+            <article class="showcase-card" data-gallery="uiux" data-category="website wireframes">
+              <button
+                type="button"
+                class="showcase-media-btn lightbox-trigger"
+                data-src="assets/images/ui-ux/website-ui.webp"
+                data-title="Architectura Studio Web Layout"
+                data-category="Website UI · Wireframes"
+                data-desc="12-column asymmetric web layout crafted in Figma with structured editorial typography, architectural grid proportions, and responsive spacing."
+                aria-label="Preview Architectura Studio Web Layout in lightbox"
+              >
+                <img
+                  src="assets/images/ui-ux/website-ui.webp"
+                  alt="Website UI design presentation inside Figma canvas showing architectural studio landing page"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="showcase-hover-hint">Inspect Preview &nearr;</span>
+              </button>
+              <div class="showcase-card-body">
+                <p class="showcase-meta">Website UI <span aria-hidden="true">&middot;</span> Wireframes</p>
+                <h3 class="showcase-title">Architectura Studio Web Layout</h3>
+                <p class="showcase-desc">
+                  High-contrast editorial website grid combining bold grotesque headings with balanced whitespace and structured project cards.
+                </p>
+              </div>
+            </article>
+
+            <article class="showcase-card" data-gallery="uiux" data-category="dashboard prototypes wireframes">
+              <button
+                type="button"
+                class="showcase-media-btn lightbox-trigger"
+                data-src="assets/images/ui-ux/dashboard-ui.webp"
+                data-title="SaaS Analytics Control Dashboard"
+                data-category="Dashboard Design · Prototypes"
+                data-desc="Enterprise analytics workspace featuring a slim dark navigation rail, four-metric KPI strip, revenue curve, cohort bar breakdown, and customer table."
+                aria-label="Preview SaaS Analytics Control Dashboard in lightbox"
+              >
+                <img
+                  src="assets/images/ui-ux/dashboard-ui.webp"
+                  alt="SaaS analytics dashboard UI design showing KPI summary strip, revenue charts, and customer activity table"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="showcase-hover-hint">Inspect Preview &nearr;</span>
+              </button>
+              <div class="showcase-card-body">
+                <p class="showcase-meta">Dashboard Design <span aria-hidden="true">&middot;</span> Wireframes &amp; Prototypes</p>
+                <h3 class="showcase-title">SaaS Analytics Control Dashboard</h3>
+                <p class="showcase-desc">
+                  Data-dense administrative interface balancing tabular typography, clean chart hierarchy, and restrained cobalt focal states.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== EDUCATION TIMELINE ======================== -->
+      <section id="education" class="section-block" data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <p class="section-kicker">05. Academic Journey</p>
+            <h2 class="section-title">Education &amp; specialization path.</h2>
+          </div>
+
+          <ol class="timeline" aria-label="Education timeline">
+            <li class="timeline-item timeline-item-completed">
+              <div class="timeline-marker timeline-marker-completed" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <p class="timeline-status">Completed</p>
+                <h3 class="timeline-title">Diploma in Computer Engineering</h3>
+                <p class="timeline-institution">P P Savani University</p>
+                <p class="timeline-desc">
+                  Built a strong foundation in programming fundamentals, database management, web technologies, software engineering principles, and practical application development.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item timeline-item-active">
+              <div class="timeline-marker timeline-marker-active" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <p class="timeline-status">Currently Pursuing (D2D)</p>
+                <h3 class="timeline-title">B.Tech Artificial Intelligence and Machine Learning</h3>
+                <p class="timeline-institution">JG University</p>
+                <p class="timeline-desc">
+                  Expanding engineering expertise into machine learning algorithms, computer vision, data structures, and intelligent full-stack software architectures.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item timeline-item-future">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <p class="timeline-status">Future Goal</p>
+                <h3 class="timeline-title">M.Tech Artificial Intelligence and Machine Learning</h3>
+                <p class="timeline-institution">Postgraduate Research &amp; Specialization</p>
+                <p class="timeline-desc">
+                  Planned advanced academic specialization focused on applied deep learning, human-centered AI interfaces, and scalable intelligent systems.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ======================== CONTACT SECTION ======================== -->
+      <section id="contact" class="section-block section-alt" data-reveal>
+        <div class="container">
+          <div class="contact-layout">
+            <div class="contact-info">
+              <p class="section-kicker">06. Get In Touch</p>
+              <h2 class="section-title">Let&rsquo;s build something thoughtful together.</h2>
+              <p class="contact-lead">
+                Open to web development projects, UI/UX design collaborations, and internship opportunities. Send a message using the form or reach out directly through GitHub or LinkedIn.
+              </p>
+
+              <div class="contact-direct-links">
+                <div class="contact-detail-row">
+                  <span class="contact-detail-label">GitHub</span>
+                  <a href="https://github.com/Sumitpatel2512" target="_blank" rel="noopener noreferrer">
+                    github.com/Sumitpatel2512
+                  </a>
+                </div>
+                <div class="contact-detail-row">
+                  <span class="contact-detail-label">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/sumitpatel2512/" target="_blank" rel="noopener noreferrer">
+                    linkedin.com/in/sumitpatel2512
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  placeholder="Enter your full name"
+                  autocomplete="name"
+                  required
+                />
+                <span class="field-error" id="error-name" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+                <span class="field-error" id="error-email" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input
+                  type="text"
+                  id="contact-subject"
+                  name="subject"
+                  placeholder="Project inquiry, UI/UX design, or collaboration"
+                  required
+                />
+                <span class="field-error" id="error-subject" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me about your project scope, timeline, or idea..."
+                  required
+                ></textarea>
+                <span class="field-error" id="error-message" aria-live="polite"></span>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-submit">Validate &amp; Preview Message</button>
+              </div>
+
+              <div id="form-feedback" class="form-feedback" role="status" aria-live="polite" hidden></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a href="#hero" class="footer-logo">Sumit.Dev</a>
+            <p class="footer-role">Web Developer &amp; UI/UX Designer</p>
+            <p class="footer-summary">
+              B.Tech AI &amp; ML undergraduate crafting clean web applications, responsive layouts, and thoughtful interactive product experiences.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-heading">Navigation</h3>
+            <nav class="footer-nav" aria-label="Footer navigation">
+              <a href="#hero">Home</a>
+              <a href="#about">About</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#ui-ux">UI/UX</a>
+              <a href="#education">Education</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-heading">Connect</h3>
+            <ul class="footer-connect-list">
+              <li>
+                <a href="https://github.com/Sumitpatel2512" target="_blank" rel="noopener noreferrer" class="footer-connect-link">
+                  <img src="assets/icons/github.svg" alt="" width="16" height="16" class="icon-invert-dark" aria-hidden="true" />
+                  <span>GitHub</span>
+                  <span class="footer-link-meta">/Sumitpatel2512</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/sumitpatel2512/" target="_blank" rel="noopener noreferrer" class="footer-connect-link">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                  </svg>
+                  <span>LinkedIn</span>
+                  <span class="footer-link-meta">/in/sumitpatel2512</span>
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="footer-connect-link">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                  <span>Start a Conversation</span>
+                  <span class="footer-link-meta">&rarr;</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="copyright-year">2026</span> Sumit Patel | Portfolio</p>
+          <button id="back-to-top" type="button" class="back-to-top-btn" aria-label="Back to top">
+            Back to top &uarr;
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ======================== IMAGE LIGHTBOX MODAL ======================== -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+      <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+      <div class="lightbox-dialog">
+        <div class="lightbox-topbar">
+          <div class="lightbox-meta">
+            <p id="lightbox-category" class="lightbox-category"></p>
+            <h3 id="lightbox-title" class="lightbox-title"></h3>
+          </div>
+          <button id="lightbox-close" type="button" class="lightbox-close" aria-label="Close lightbox preview">
+            &times;
+          </button>
+        </div>
+        <div class="lightbox-media">
+          <img id="lightbox-image" src="" alt="" />
+        </div>
+        <div class="lightbox-footer">
+          <p id="lightbox-desc" class="lightbox-desc"></p>
+          <div class="lightbox-nav">
+            <button id="lightbox-prev" type="button" class="btn btn-secondary btn-sm" aria-label="Previous design">&larr; Prev</button>
+            <button id="lightbox-next" type="button" class="btn btn-secondary btn-sm" aria-label="Next design">Next &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="js/main.js"></script>
+  </body>
+</html>
