@@ -46,16 +46,25 @@ This portfolio showcases my skills, projects, education, and design work.
 - Contact form validation
 - Back to top button
 
+
 ## Project Structure
+
+```text
 Portfolio Website/
+│
 ├── index.html
+│
 ├── css/
 │   └── style.css
+│
 ├── js/
 │   └── main.js
+│
 └── assets/
     ├── icons/
     └── images/
+```
+
 
 ## Author
 Sumit Patel
