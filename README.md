@@ -86,6 +86,13 @@ Sumit Patel
 
 Created for educational purposes.
 
+## Contact
+
+If you want to connect with me or know more about my projects, visit my portfolio website.
+
+- Portfolio: https://sumitpatel2512.github.io/Sumit_Patel_267530_Portfolio/
+- GitHub: https://github.com/Sumitpatel2512
+
 ## Live Website
 
 [Visit My Portfolio](https://sumitpatel2512.github.io/Sumit_Patel_267530_Portfolio/)
