@@ -43,6 +43,13 @@ This portfolio showcases my skills, projects, education, and design work.
 3. Bus Ticket Booking Platform
 4. Treasure Hunt Adventure Game
 5. AI-Based Online Exam Proctoring System
+   
+## Future Improvements
+
+- Add more personal projects.
+- Improve website animations.
+- Add new technologies and skills.
+- Enhance mobile user experience.
 
 ## Features
 
